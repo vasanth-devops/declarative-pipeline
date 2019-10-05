@@ -1,6 +1,6 @@
 pipeline {
     agent any
-	
+		
     stages {
         stage('One') {
                 steps {
@@ -24,12 +24,14 @@ pipeline {
 			echo "Hello"
                         }
         }
-        
-    }
-	agent {
+	    stage('four') {
+	  
     		dockerfile {
             		args "-v /tmp:/tmp -p 8000:8000"
-    }
+    
 }
+	    }
+    }
+	
 }
 
